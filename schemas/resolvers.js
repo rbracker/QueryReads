@@ -18,7 +18,7 @@ const resolvers = {
         throw new AuthenticationError('Invalid credentials');
       }
 
-      const token = jwt.sign({ data: { _id: user._id } }, 'your-secret-key', {
+      const token = jwt.sign({ data: { _id: user._id } }, 'Beans246*', {
         expiresIn: '2h',
       });
 
@@ -27,7 +27,7 @@ const resolvers = {
     addUser: async (_, { username, email, password }) => {
       const user = await User.create({ username, email, password });
 
-      const token = jwt.sign({ data: { _id: user._id } }, 'your-secret-key', {
+      const token = jwt.sign({ data: { _id: user._id } }, 'Beans246*', {
         expiresIn: '2h',
       });
 
